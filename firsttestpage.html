@@ -269,7 +269,7 @@ body, table, td {font-family: Helvetica, sans-serif !important;}
                             <tr align="left">
                                 <td width="600" valign="middle" align="left" bgcolor="#ffffff"
                                     style="padding-left:42px;font:normal 25px/35px Helvetica Neue, Helvetica, Arial, sans-serif; text-transform:none; color:#0b3c5f; padding-right:30px; border:none; font-weight:700;"
-                                    class="h3"> There Was a Problem Verifying Your Bank Account </td>
+                                    class="h3"> JIRA LC (ETM-4422) [Spike] SFMC SMS Integration </td>
                             </tr>
                         </table> <!-- COPY WRAPPER -->
                         <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#ffffff"
@@ -293,7 +293,7 @@ body, table, td {font-family: Helvetica, sans-serif !important;}
                                                     <tr valign="top">
                                                         <td style="font: normal 16px/22px Helvetica Neue, Helvetica, Arial, sans-serif; color: #808080;"
                                                             align="left" class="font18"> Hi
-                                                            %%=ProperCase(FIRST_NAME)=%%, </td>
+                                                            %%=ProperCase(EMAIL)=%%, </td>
                                                     </tr>
                                                     <tr>
                                                         <td height="20" style="font-size:1px; line-height:1px">&nbsp;
@@ -301,12 +301,19 @@ body, table, td {font-family: Helvetica, sans-serif !important;}
                                                     </tr>
                                                     <tr valign="top">
                                                         <td style="font: normal 16px/22px Helvetica Neue, Helvetica, Arial, sans-serif; color: #808080;"
-                                                            align="left" class="font18"> You recently tried to add your
-                                                            bank account to your LendingClub profile. We weren't able to
-                                                            initiate the small electronic debit and credit (less than
-                                                            one dollar) from your bank account because you didn't have
-                                                            enough funds. We need you to finish your bank verification
-                                                            in order to get your loan. </td>
+                                                            align="left" class="font18"> *User Story:* As a marketing operations user I would like to be able to create a custom activity in journey builder that directly passes individuals who should receive a collections SMS to Solutions by Text (SBT) our SMS vendor we use for collections, so that I can trigger an SMS within the journey and it will execute immediately in support of collections use cases. <br><br>
+
+*Requirement:* <br>
+* Develop and configure a SFMC custom activity that executes a webhook call to Solutions by Text to send an SMS to a member.<br>
+* Document current state flow for SMS Collection use cases\<br><br>
+
+ 
+
+*Acceptance Criteria*<br>
+* Reviewing current state and future state design with Alben, Bee, Simrita (optional) and Gayathri<br>
+** Documenting partner work required <br>
+** Design document should include partner integration, any gaps in delivery solutions, along with work required for dev<br>
+** Understand timelines for partner work<br> </td>
                                                     </tr>
                                                     <tr>
                                                         <td height="20" style="font-size:1px; line-height:1px">&nbsp;
@@ -332,37 +339,27 @@ body, table, td {font-family: Helvetica, sans-serif !important;}
                                                                             align="center"
                                                                             style="font-size: 16px/22px;">&nbsp;1.&nbsp;
                                                                         </td>
-                                                                        <td valign="top" style="text-align:left">Click
-                                                                            the <strong>'Link Your Bank'</strong>
-                                                                            button. </td>
+                                                                        <td valign="top" style="text-align:left">Should we integrate with Comms Gateway?* Ideally we are reusing what's been created. ** Need to evaluate if we integrate with comms gateway/build new.  </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td width="30" valign="top" height="20"
                                                                             align="center" style="font-size:16px/22px;">
                                                                             &nbsp;2.&nbsp;</td>
-                                                                        <td valign="top">Enter your bank account
-                                                                            information. </td>
+                                                                        <td valign="top">What is the dif of engineering responsibility from Simrita's team and MarTech Team </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td width="30" valign="top" height="20"
                                                                             align="center"
                                                                             style="font-size: 16px/22px;">&nbsp;3.&nbsp;
                                                                         </td>
-                                                                        <td valign="top">We'll then initiate an
-                                                                            electronic debit and a credit for the same
-                                                                            amount (less than one dollar) from your
-                                                                            account, which will appear in your account
-                                                                            within 4 business days </td>
+                                                                        <td valign="top">Is there anyway work required by SBT?* there should not be, but we should validate this during the spike.</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td width="30" valign="top" height="20"
                                                                             align="center"
                                                                             style="font-size: 16px/22px;">&nbsp;4.&nbsp;
                                                                         </td>
-                                                                        <td valign="top">Once you have the amount, log
-                                                                            back in and click the <strong>'Verify
-                                                                                Account'</strong> button and enter the
-                                                                            exact debit amount </td>
+                                                                        <td valign="top">Do we already have a web interface and/or should we be using heroku </td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -383,14 +380,14 @@ body, table, td {font-family: Helvetica, sans-serif !important;}
                                                                 <tr valign="top" align="center">
                                                                     <td align="center" valign="middle" bgcolor="#e7ebec"
                                                                         style="font:normal 17px/20px Helvetica Neue, Helvetica, Arial, sans-serif; padding: 0px 10px; border-top-radius:; max-width:320px;">
-                                                                        <a href="%%ACCOUNT_SUMMARY_URL%%&utm_medium=email&utm_source=txemail&utm_campaign=pl_em"
+                                                                        <a href="https://ampscript.xyz/tips-and-tricks/how-to-create-store-use-rest-api-tokens-in-sfmc/"
                                                                             target="_blank"
                                                                             style="outline: none; text-decoration: none;"><span
                                                                                 style="color: #e34426; text-decoration: none;"><strong>Link
                                                                                     Your Details</strong></span></a> </td>
                                                                     <td bgcolor="#ffffff" align="left"
                                                                         style="font:normal 10px/16px Helvetica Neue, Helvetica, Arial, sans-serif; min-width:20px;">
-                                                                        <a href="%%ACCOUNT_SUMMARY_URL%%&utm_medium=email&utm_source=txemail&utm_campaign=pl_em"
+                                                                        <a href="https://ampscript.xyz/tips-and-tricks/how-to-create-store-use-rest-api-tokens-in-sfmc/"
                                                                             target="_blank"
                                                                             style="outline: none; text-decoration: none;">
                                                                             <img src="http://image.mail6.lendingclub.com/lib/fe9b12717365047e76/m/1/Carrot_124x124.jpg"
@@ -410,9 +407,9 @@ body, table, td {font-family: Helvetica, sans-serif !important;}
                                                             align="left" class="font18">If you have any questions,
                                                             please contact us at <a
                                                                 href="mailto:support@lendingclub.com"
-                                                                style="color:#e34426;text-decoration: none;font-weight:bold">support@lendingclub.com</a>
+                                                                style="color:#e34426;text-decoration: none;font-weight:bold">mkarimee@lendingclub.com</a>
                                                             or at
-                                                            %%=Lookup("Borrower_Personalization","support_number","ID",1)=%%.
+  
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -422,7 +419,9 @@ body, table, td {font-family: Helvetica, sans-serif !important;}
                                                     <tr valign="top">
                                                         <td style="font: normal 16px/22px Helvetica Neue, Helvetica, Arial, sans-serif; color: #808080;"
                                                             align="left" class="font18"> Thanks for being part of
-                                                            LendingClub. </td>
+                                                            LendingClub. <br><br> <font face="verdana" size="1" color="#444444">This email was sent by: <b>%%Member_Busname%%</b><br>%%Member_Addr%% %%Member_City%%, %%Member_State%%, %%Member_PostalCode%%, %%Member_Country%%<br><br></font>
+      
+      <a href="%%profile_center_url%%" alias="Update Profile">Update Profile</a></td>
                                                     </tr>
                                                     <tr>
                                                         <td height="20" style="font-size:1px; line-height:1px">&nbsp;
@@ -488,6 +487,11 @@ body, table, td {font-family: Helvetica, sans-serif !important;}
         </div>
     </div>
     <custom name="opencounter" type="tracking">
+      
+
+      
 </body>
 
 </html>
+  
+  
